@@ -13,6 +13,9 @@ pushd "%~dp0"
 cd /d %ProgramFiles%\Microsoft Office\Office16
 cd /d %ProgramFiles(x86)%\Microsoft Office\Office16
 
+echo Are you sure you want to change and activate your Office?
+pause
+
 cscript ospp.vbs /inslic:"..\root\Licenses16\VisioProVL_KMS_Client-ppd.xrm-ms"
 cscript ospp.vbs /inslic:"..\root\Licenses16\VisioProVL_KMS_Client-ul.xrm-ms"
 cscript ospp.vbs /inslic:"..\root\Licenses16\VisioProVL_KMS_Client-ul-oob.xrm-ms"

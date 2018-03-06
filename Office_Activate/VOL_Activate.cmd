@@ -1,4 +1,4 @@
-echo off
+@echo off
 
 :ADMIN
 openfiles >nul 2>nul ||(
@@ -12,6 +12,9 @@ pushd "%~dp0"
 
 cd /d %ProgramFiles%\Microsoft Office\Office16
 cd /d %ProgramFiles(x86)%\Microsoft Office\Office16
+
+echo Are you sure you want to activate your Office?
+pause
 
 REM Activate
 cscript ospp.vbs /inpkey:XQNVK-8JYDB-WJ9W3-YJ8YR-WFG99
