@@ -60,7 +60,8 @@ LICENSE DESCRIPTION: Office 15, VOLUME_KMSCLIENT channel
 | | | └── VisioStd.cmd    # 将零售版的 Office Visio 转换为批量授权版，然后激活
 | | ├── Retail2VOL+Activate.cmd    # 将零售版的 Office 转换为批量授权版，然后激活
 | | └── Retail2VOL_Only.cmd    # 仅仅将零售版的 Office 转换为批量授权版，不激活
-| └── VOL_Activate.cmd    # 激活批量授权版的 Office
+| ├── VOL_Activate.cmd    # 激活批量授权版的 Office
+| └── 查看 Office 状态.cmd    # 查看 Office 状态
 ├── Windows_Activate.cmd    # 激活批量授权版的 Windows
 ├── KMS 服务可用性测试.url    # 检测 KMS 服务器是否挂了
 └── README.md

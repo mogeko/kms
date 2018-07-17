@@ -19,6 +19,8 @@ echo Are you sure you want to change your Office?
 pause
 
 REM Retail2VOL
+echo ---Processing--------------------------
+echo ---------------------------------------
 cscript %ospp% /inslic:"..\root\Licenses16\ProPlusVL_KMS_Client-ppd.xrm-ms"
 cscript %ospp% /inslic:"..\root\Licenses16\ProPlusVL_KMS_Client-ul.xrm-ms"
 cscript %ospp% /inslic:"..\root\Licenses16\ProPlusVL_KMS_Client-ul-oob.xrm-ms"
@@ -42,3 +44,6 @@ cscript %ospp% /inslic:"..\root\Licenses16\VisioProVL_MAK-pl.xrm-ms"
 cscript %ospp% /inslic:"..\root\Licenses16\VisioProVL_MAK-ppd.xrm-ms"
 cscript %ospp% /inslic:"..\root\Licenses16\VisioProVL_MAK-ul-oob.xrm-ms"
 cscript %ospp% /inslic:"..\root\Licenses16\VisioProVL_MAK-ul-phn.xrm-ms"
+echo ---------------------------------------
+echo ---------------------------------------
+echo ---Exiting-----------------------------

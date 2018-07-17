@@ -19,9 +19,18 @@ echo Are you sure you want to activate your Office?
 pause
 
 REM Activate
+echo ---Processing--------------------------
+echo ---------------------------------------
 cscript %ospp% /inpkey:XQNVK-8JYDB-WJ9W3-YJ8YR-WFG99
 cscript %ospp% /inpkey:YG9NW-3K39V-2T3HJ-93F3Q-G83KT
 cscript %ospp% /inpkey:PD3PC-RHNGV-FXJ29-8JK7D-RJRJK
 
 cscript %ospp% /sethst:kms.03k.org
 cscript %ospp% /act
+echo ---------------------------------------
+echo ---------------------------------------
+echo ---Exiting-----------------------------
+
+echo Current Office status: 
+cscript "%ospp%" /dstatus
+pause
