@@ -12,6 +12,11 @@ Office 方面，这里提供了两种激活 Office 的脚本，Retail 版和 VOL
 
 **零售版的 Office 和批量授权版的 Office 在功能上没有任何区别，只是激活方式不同。**
 
+---
+
+- V2.0.0 更新一个引导脚本 `Run.cmd`  
+  直接双击运行 `Run.cmd`，然后选择合适的服务即可激活相应的软件
+
 # KMS 服务器可用性测试
 
 [检测 KMS 服务器是否挂了](https://03k.org/go/kmscheck.php)
@@ -20,17 +25,11 @@ Office 方面，这里提供了两种激活 Office 的脚本，Retail 版和 VOL
 
 # 使用方法
 
-## Windows 激活
+双击 `Run.cmd`，选择合适的服务即可激活相应的软件。
 
-双击脚本激活。（脚本需要管理员权限，双击脚本，它自己会弹出 UAC 提示授权）
+或者，再目录中选择合适的脚本单独运行。
 
-## Office 激活
-
-先安装 Office，最好安装批量授权版。
-
-然后选择对应的脚本激活就可以了。（脚本同样需要管理员权限，同样会自己弹出 UAC 提示授权）
-
-### 判断你安装的 Office 是哪个版本
+## 判断你安装的 Office 是哪个版本
 
 用管理员权限打开命令行（CMD），来到Office的安装目录，输入命令：`cscript ospp.vbs /dstatus `
 
@@ -52,7 +51,7 @@ LICENSE DESCRIPTION: Office 15, VOLUME_KMSCLIENT channel
 
 ```
 .
-| ├── Office_Activate
+├──── Office_Activate
 | | ├── Component
 | | | ├── ProjectPro.cmd    # 将零售版的 Office Project Plus 转换为批量授权版，然后激活
 | | | ├── ProjectStd.cmd    # 将零售版的 Office Project 转换为批量授权版，然后激活
@@ -62,8 +61,10 @@ LICENSE DESCRIPTION: Office 15, VOLUME_KMSCLIENT channel
 | | └── Retail2VOL_Only.cmd    # 仅仅将零售版的 Office 转换为批量授权版，不激活
 | ├── VOL_Activate.cmd    # 激活批量授权版的 Office
 | └── 查看 Office 状态.cmd    # 查看 Office 状态
-├── Windows_Activate.cmd    # 激活批量授权版的 Windows
+├────Windows_Activate
+| └── Windows_Activate.cmd    # 激活批量授权版的 Windows
 ├── KMS 服务可用性测试.url    # 检测 KMS 服务器是否挂了
+├── Run.cmd    # 引导用户选择合适的脚本进行激活
 └── README.md
 ```
 
