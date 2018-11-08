@@ -20,17 +20,17 @@ pause
 
 echo ---Processing--------------------------
 echo ---------------------------------------
-cscript %ospp% /inslic:"..\root\Licenses16\ProjectProVL_KMS_Client-ppd.xrm-ms"
-cscript %ospp% /inslic:"..\root\Licenses16\ProjectProVL_KMS_Client-ul.xrm-ms"
-cscript %ospp% /inslic:"..\root\Licenses16\ProjectProVL_KMS_Client-ul-oob.xrm-ms"
-cscript %ospp% /inslic:"..\root\Licenses16\ProjectProVL_MAK-pl.xrm-ms"
-cscript %ospp% /inslic:"..\root\Licenses16\ProjectProVL_MAK-ppd.xrm-ms"
-cscript %ospp% /inslic:"..\root\Licenses16\ProjectProVL_MAK-ul-oob.xrm-ms"
-cscript %ospp% /inslic:"..\root\Licenses16\ProjectProVL_MAK-ul-phn.xrm-ms"
+cscript "%ospp%" /inslic:"..\root\Licenses16\ProjectProVL_KMS_Client-ppd.xrm-ms"
+cscript "%ospp%" /inslic:"..\root\Licenses16\ProjectProVL_KMS_Client-ul.xrm-ms"
+cscript "%ospp%" /inslic:"..\root\Licenses16\ProjectProVL_KMS_Client-ul-oob.xrm-ms"
+cscript "%ospp%" /inslic:"..\root\Licenses16\ProjectProVL_MAK-pl.xrm-ms"
+cscript "%ospp%" /inslic:"..\root\Licenses16\ProjectProVL_MAK-ppd.xrm-ms"
+cscript "%ospp%" /inslic:"..\root\Licenses16\ProjectProVL_MAK-ul-oob.xrm-ms"
+cscript "%ospp%" /inslic:"..\root\Licenses16\ProjectProVL_MAK-ul-phn.xrm-ms"
 
-cscript %ospp% /inpkey:YG9NW-3K39V-2T3HJ-93F3Q-G83KT
-cscript %ospp% /sethst:kms.03k.org
-cscript %ospp% /act
+cscript "%ospp%" /inpkey:YG9NW-3K39V-2T3HJ-93F3Q-G83KT
+cscript "%ospp%" /sethst:kms.03k.org
+cscript "%ospp%" /act
 echo ---------------------------------------
 echo ---------------------------------------
 echo ---Exiting-----------------------------
