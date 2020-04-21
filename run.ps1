@@ -1,8 +1,9 @@
 # 强制以管理员权限以运行
-If (-NOT ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] "Administrator")) {
-    $arguments = "& '" + $myinvocation.mycommand.definition + "'"
-    Start-Process powershell -Verb runAs -ArgumentList $arguments
-    Break
+$currentUser = New-Object Security.Principal.WindowsPrincipal $([Security.Principal.WindowsIdentity]::GetCurrent())
+$testadmin = $currentUser.IsInRole([Security.Principal.WindowsBuiltinRole]::Administrator)
+if ($testadmin -eq $false) {
+    Start-Process powershell.exe -Verb RunAs -ArgumentList ('-noprofile -noexit -file "{0}" -elevated' -f ($myinvocation.MyCommand.Definition))
+    exit $LASTEXITCODE
 }
 
 $script:LICENCE = @"
