@@ -1,11 +1,11 @@
 {
-    "description": "本脚本支持激活所有版本的 Office 和批量激活版的 Windows\n输入序号来选择你想要执行的函数，如果你想同时执行几个函数，支持多选\n例如，输入: 123; 则表示选择: \"选项1\", \"选项2\" 和\"选项3\"",
+    "description": "本脚本支持激活所有版本的 Office 和批量激活版的 Windows\n零售版的 Office 需要通过 \"转换 Office 版本\" 转换为批量激活版\n\"转换 Office 版本\" 功能仅支持 Office 2016 以上的版本\n零售版与批量激活版功能上没有任何区别，只是激活方式不同\n\n输入序号来选择你想要执行的函数，如果你想同时执行几个函数，支持多选\n例如，输入: 123; 则表示选择: \"选项1\", \"选项2\" 和\"选项3\"",
     "option": [{
-        "name": "激活 Windows (批量激活版)",
+        "name": "激活 Windows(批量激活版)",
         "action": "ActivateWindows"
     },
     {
-        "name": "激活 Office",
+        "name": "激活 Office(批量激活版)",
         "submenu": {
             "description": "请选择你 Office 的版本号",
             "option": [{
@@ -89,7 +89,7 @@
         }
     },
     {
-        "name": "激活 Project",
+        "name": "激活 Project(批量激活版)",
         "submenu": {
             "description": "请选择你 Project 的版本号",
             "option": [{
@@ -149,7 +149,7 @@
         }
     },
     {
-        "name": "激活 Visio",
+        "name": "激活 Visio(批量激活版)",
         "submenu": {
             "description": "请选择你 Visio 的版本号",
             "option": [{
@@ -227,6 +227,216 @@
                         "action": "ActivateOffice",
                         "key": "7TQNQ-K3YQQ-3PFH7-CCPPM-X4VQ2",
                         "osppdir": "office16"
+                    }]
+                }
+            }]
+        }
+    },
+    {
+        "name": "转换 Office 版本",
+        "submenu": {
+            "description": "零售版与批量激活版功能上没有任何区别，只是激活方式不同\n请选择你想转换的 Office 软件",
+            "option": [{
+                "name": "转换零售版 Office 2016 至批量激活版",
+                "submenu": {
+                    "description":"零售版与批量激活版功能上没有任何区别，只是激活方式不同\n请选择你想转换的 Office 的版本",
+                    "option": [{
+                        "name":"转换 Office 专业增强版 2016",
+                        "action": "ConvertOffice",
+                        "osppdir": "office16",
+                        "licenses": [
+                            "License16\\ProPlusVL_KMS_Client-ppd.xrm-ms",
+                            "License16\\ProPlusVL_KMS_Client-ul.xrm-ms",
+                            "License16\\ProPlusVL_KMS_Client-ul-oob.xrm-ms",
+                            "License16\\ProPlusVL_MAK-pl.xrm-ms",
+                            "License16\\ProPlusVL_MAK-ppd.xrm-ms",
+                            "License16\\ProPlusVL_MAK-ul-oob.xrm-ms",
+                            "License16\\ProPlusVL_MAK-ul-phn.xrm-ms"
+                        ]
+                    },
+                    {
+                        "name":"转换 Office Standard 2016",
+                        "action": "ConvertOffice",
+                        "osppdir": "office16",
+                        "licenses": [
+                            "License16\\StandardVL_KMS_Client-ppd.xrm-ms",
+                            "License16\\StandardVL_KMS_Client-ul.xrm-ms",
+                            "License16\\StandardVL_KMS_Client-ul-oob.xrm-ms",
+                            "License16\\StandardVL_MAK-pl.xrm-ms",
+                            "License16\\StandardVL_MAK-ppd.xrm-ms",
+                            "License16\\StandardVL_MAK-ul-oob.xrm-ms",
+                            "License16\\StandardVL_MAK-ul-phn.xrm-ms"
+                        ]
+                    }]
+                }
+            },
+            {
+                "name": "转换零售版 Office 2019 至批量激活版",
+                "submenu": {
+                    "description":"零售版与批量激活版功能上没有任何区别，只是激活方式不同\n请选择你想转换的 Office 的版本",
+                    "option": [{
+                        "name":"转换 Office 专业增强版 2019",
+                        "action": "ConvertOffice",
+                        "osppdir": "office16",
+                        "licenses": [
+                            "License16\\ProPlusVL_KMS_Client-ppd.xrm-ms",
+                            "License16\\ProPlusVL_KMS_Client-ul.xrm-ms",
+                            "License16\\ProPlusVL_KMS_Client-ul-oob.xrm-ms",
+                            "License16\\ProPlusVL_MAK-pl.xrm-ms",
+                            "License16\\ProPlusVL_MAK-ppd.xrm-ms",
+                            "License16\\ProPlusVL_MAK-ul-oob.xrm-ms",
+                            "License16\\ProPlusVL_MAK-ul-phn.xrm-ms"
+                        ]
+                    },
+                    {
+                        "name":"转换 Office 标准版 2019",
+                        "action": "ConvertOffice",
+                        "osppdir": "office16",
+                        "licenses": [
+                            "License16\\StandardVL_KMS_Client-ppd.xrm-ms",
+                            "License16\\StandardVL_KMS_Client-ul.xrm-ms",
+                            "License16\\StandardVL_KMS_Client-ul-oob.xrm-ms",
+                            "License16\\StandardVL_MAK-pl.xrm-ms",
+                            "License16\\StandardVL_MAK-ppd.xrm-ms",
+                            "License16\\StandardVL_MAK-ul-oob.xrm-ms",
+                            "License16\\StandardVL_MAK-ul-phn.xrm-ms"
+                        ]
+                    }]
+                }
+            },
+            {
+                "name": "转换零售版 Project 2016 至批量激活版",
+                "submenu": {
+                    "description":"零售版与批量激活版功能上没有任何区别，只是激活方式不同\n请选择你想转换的 Project 的版本",
+                    "option": [{
+                        "name":"转换 Project Professional 2016",
+                        "action": "ConvertOffice",
+                        "osppdir": "office16",
+                        "licenses": [
+                            "License16\\ProjectProVL_KMS_Client-ppd.xrm-ms",
+                            "License16\\ProjectProVL_KMS_Client-ul.xrm-ms",
+                            "License16\\ProjectProVL_KMS_Client-ul-oob.xrm-ms",
+                            "License16\\ProjectProVL_MAK-pl.xrm-ms",
+                            "License16\\ProjectProVL_MAK-ppd.xrm-ms",
+                            "License16\\ProjectProVL_MAK-ul-oob.xrm-ms",
+                            "License16\\ProjectProVL_MAK-ul-phn.xrm-ms"
+                        ]
+                    },
+                    {
+                        "name":"转换 Project Standard 2016",
+                        "action": "ConvertOffice",
+                        "osppdir": "office16",
+                        "licenses": [
+                            "License16\\ProjectStdVL_KMS_Client-ppd.xrm-ms",
+                            "License16\\ProjectStdVL_KMS_Client-ul.xrm-ms",
+                            "License16\\ProjectStdVL_KMS_Client-ul-oob.xrm-ms",
+                            "License16\\ProjectStdVL_MAK-pl.xrm-ms",
+                            "License16\\ProjectStdVL_MAK-ppd.xrm-ms",
+                            "License16\\ProjectStdVL_MAK-ul-oob.xrm-ms",
+                            "License16\\ProjectStdVL_MAK-ul-phn.xrm-ms"
+                        ]
+                    }]
+                }
+            },
+            {
+                "name": "转换零售版 Project 2019 至批量激活版",
+                "submenu": {
+                    "description":"零售版与批量激活版功能上没有任何区别，只是激活方式不同\n请选择你想转换的 Project 的版本",
+                    "option": [{
+                        "name":"转换 Project 专业版 2019",
+                        "action": "ConvertOffice",
+                        "osppdir": "office16",
+                        "licenses": [
+                            "License16\\ProjectProVL_KMS_Client-ppd.xrm-ms",
+                            "License16\\ProjectProVL_KMS_Client-ul.xrm-ms",
+                            "License16\\ProjectProVL_KMS_Client-ul-oob.xrm-ms",
+                            "License16\\ProjectProVL_MAK-pl.xrm-ms",
+                            "License16\\ProjectProVL_MAK-ppd.xrm-ms",
+                            "License16\\ProjectProVL_MAK-ul-oob.xrm-ms",
+                            "License16\\ProjectProVL_MAK-ul-phn.xrm-ms"
+                        ]
+                    },
+                    {
+                        "name":"转换 Project 标准版 2019",
+                        "action": "ConvertOffice",
+                        "osppdir": "office16",
+                        "licenses": [
+                            "License16\\ProjectStdVL_KMS_Client-ppd.xrm-ms",
+                            "License16\\ProjectStdVL_KMS_Client-ul.xrm-ms",
+                            "License16\\ProjectStdVL_KMS_Client-ul-oob.xrm-ms",
+                            "License16\\ProjectStdVL_MAK-pl.xrm-ms",
+                            "License16\\ProjectStdVL_MAK-ppd.xrm-ms",
+                            "License16\\ProjectStdVL_MAK-ul-oob.xrm-ms",
+                            "License16\\ProjectStdVL_MAK-ul-phn.xrm-ms"
+                        ]
+                    }]
+                }
+            },
+            {
+                "name": "转换零售版 Visio 2016 至批量激活版",
+                "submenu": {
+                    "description":"零售版与批量激活版功能上没有任何区别，只是激活方式不同\n请选择你想转换的 Visio 的版本",
+                    "option": [{
+                        "name":"转换 Visio Professional 2016",
+                        "action": "ConvertOffice",
+                        "osppdir": "office16",
+                        "licenses": [
+                            "License16\\VisioProVL_KMS_Client-ppd.xrm-ms",
+                            "License16\\VisioProVL_KMS_Client-ul.xrm-ms",
+                            "License16\\VisioProVL_KMS_Client-ul-oob.xrm-ms",
+                            "License16\\VisioProVL_MAK-pl.xrm-ms",
+                            "License16\\VisioProVL_MAK-ppd.xrm-ms",
+                            "License16\\VisioProVL_MAK-ul-oob.xrm-ms",
+                            "License16\\VisioProVL_MAK-ul-phn.xrm-ms"
+                        ]
+                    },
+                    {
+                        "name":"转换 Visio Standard 2016",
+                        "action": "ConvertOffice",
+                        "osppdir": "office16",
+                        "licenses": [
+                            "License16\\VisioStdVL_KMS_Client-ppd.xrm-ms",
+                            "License16\\VisioStdVL_KMS_Client-ul.xrm-ms",
+                            "License16\\VisioStdVL_KMS_Client-ul-oob.xrm-ms",
+                            "License16\\VisioStdVL_MAK-pl.xrm-ms",
+                            "License16\\VisioStdVL_MAK-ppd.xrm-ms",
+                            "License16\\VisioStdVL_MAK-ul-oob.xrm-ms",
+                            "License16\\VisioStdVL_MAK-ul-phn.xrm-ms"
+                        ]
+                    }]
+                }
+            },
+            {
+                "name": "转换零售版 Visio 2019 至批量激活版",
+                "submenu": {
+                    "description":"零售版与批量激活版功能上没有任何区别，只是激活方式不同\n请选择你想转换的 Visio 的版本",
+                    "option": [{
+                        "name":"转换 Visio 专业版 2019",
+                        "action": "ConvertOffice",
+                        "osppdir": "office16",
+                        "licenses": [
+                            "License16\\VisioProVL_KMS_Client-ppd.xrm-ms",
+                            "License16\\VisioProVL_KMS_Client-ul.xrm-ms",
+                            "License16\\VisioProVL_KMS_Client-ul-oob.xrm-ms",
+                            "License16\\VisioProVL_MAK-pl.xrm-ms",
+                            "License16\\VisioProVL_MAK-ppd.xrm-ms",
+                            "License16\\VisioProVL_MAK-ul-oob.xrm-ms",
+                            "License16\\VisioProVL_MAK-ul-phn.xrm-ms"
+                        ]
+                    },
+                    {
+                        "name":"转换 Visio 标准版 2019",
+                        "action": "ConvertOffice",
+                        "osppdir": "office16",
+                        "licenses": [
+                            "License16\\VisioStdVL_KMS_Client-ppd.xrm-ms",
+                            "License16\\VisioStdVL_KMS_Client-ul.xrm-ms",
+                            "License16\\VisioStdVL_KMS_Client-ul-oob.xrm-ms",
+                            "License16\\VisioStdVL_MAK-pl.xrm-ms",
+                            "License16\\VisioStdVL_MAK-ppd.xrm-ms",
+                            "License16\\VisioStdVL_MAK-ul-oob.xrm-ms",
+                            "License16\\VisioStdVL_MAK-ul-phn.xrm-ms"
+                        ]
                     }]
                 }
             }]
