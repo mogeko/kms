@@ -39,23 +39,6 @@ LICENSE DESCRIPTION: Office 15, VOLUME_KMSCLIENT channel
 
 如果你不希望动态获取 `data.json` 或者想要自定义 `data.json`，你可以将 [`data.json`](https://mogeko.github.io/kms/data.json) 下载下来，放在 `run.ps1` 脚本的同目录下 **(不推荐这样做)**
 
-## 脚本介绍
-
-简单介绍一下各个脚本:
-
-```
-.
-├── 将零售版转换为批量激活版
-| ├── 查看 Office 状态.cmd     # 查看 Office 状态
-| ├── Office_2010.cmd         # 将零售版 Office 2010 转换为批量激活版
-| ├── Office_2013.cmd         # 将零售版 Office 2013 转换为批量激活版
-| ├── Office_2016.cmd         # 将零售版 Office 2016 转换为批量激活版
-| ├── Office_2019.cmd         # 将零售版 Office 2019 转换为批量激活版
-├── LICENSE                   # LICENSE
-├── README.md                 # README
-└── Run.ps1                   # 激活脚本
-```
-
 ## LICENCE
 
 [**GNU General Public License v3.0**](https://github.com/Mogeko/KMS/blob/master/LICENSE)
