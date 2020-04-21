@@ -33,6 +33,12 @@ LICENSE DESCRIPTION: Office 15, RETAIL(Grace) channel
 LICENSE DESCRIPTION: Office 15, VOLUME_KMSCLIENT channel
 ```
 
+## data.json
+
+储存激活用的密钥等信息的 [`data.json`](https://mogeko.github.io/kms/data.json) 部署在本项目的 Github Pages 上，在每次启动时通过网络动态获取。
+
+如果你不希望动态获取 `data.json` 或者想要自定义 `data.json`，你可以将 [`data.json`](https://mogeko.github.io/kms/data.json) 下载下来，放在 `run.ps1` 脚本的同目录下 **(不推荐这样做)**
+
 ## 脚本介绍
 
 简单介绍一下各个脚本:

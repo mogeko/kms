@@ -1,4 +1,4 @@
-强制以管理员权限以运行
+# 强制以管理员权限以运行
 If (-NOT ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] "Administrator")) {
     $arguments = "& '" + $myinvocation.mycommand.definition + "'"
     Start-Process powershell -Verb runAs -ArgumentList $arguments
@@ -18,13 +18,24 @@ $script:DATA_JSON_URL = 'https://mogeko.github.io/kms/data.json'
 if (Test-Path .\data.json) {
     $script:MENU_INFO = Get-Content .\data.json | ConvertFrom-Json
 } else {
-    while ($true) {
-        $tmp = New-TemporaryFile
-        Invoke-WebRequest $script:DATA_JSON_URL -OutFile $tmp
-        $script:MENU_INFO = Get-Content $tmp | ConvertFrom-Json
-        Remove-Item $tmp
+    for ($i = 0; $i -lt 5; $i++) {
+        try {
+            Write-Host "正在加载 data.json..." -f green
+            $tmp = New-TemporaryFile
+            Invoke-WebRequest $script:DATA_JSON_URL -OutFile $tmp
+            $script:MENU_INFO = Get-Content $tmp | ConvertFrom-Json
+        } catch {
+            Write-Host "加载 data.json 失败！重试"($i+1) -f red
+        } finally {
+            Remove-Item $tmp
+        }
         if ($script:MENU_INFO) {
             break
+        } elseif ($i -eq 4) {
+            Write-Host "$nl"
+            Write-Host "无法加载 data.json，程序即将退出" -f red
+            Start-Sleep -s 5
+            exit 1
         }
     }
 }
@@ -99,9 +110,16 @@ function CheckOSPP {
     } elseif (Test-Path "$env:ProgramFiles(x86)\Microsoft Office\$verion\ospp.vbs") {
         return "$env:ProgramFiles(x86)\Microsoft Office\$verion\ospp.vbs"
     } else {
-        Invoke-Expression 'cls'
-        Write-Host "错误！未找到 ospp.vbs 文件" -f red
-        exit 1
+        while ($true) {
+            Invoke-Expression 'cls'
+            Write-Host "错误！未找到 ospp.vbs 文件" -f red
+            Write-Host "请输入 ospp.vbs 文件的位置 (一般在 Office 的安装目录中)" -f green
+            Write-Host "使用 Ctrl+C 强制退出" -f green
+            $ospp = Read-Host "ospp.vbs"
+            if (Test-Path $ospp) {
+                return $ospp
+            }
+        }
     }
 }
 
