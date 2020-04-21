@@ -1,4 +1,4 @@
-# 强制以管理员权限以运行
+强制以管理员权限以运行
 If (-NOT ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] "Administrator")) {
     $arguments = "& '" + $myinvocation.mycommand.definition + "'"
     Start-Process powershell -Verb runAs -ArgumentList $arguments
@@ -13,11 +13,22 @@ $script:LICENCE = @"
 **********************************************
 "@
 $script:KMS_SERVER = 'kms.mogeko.me'
+$script:DATA_JSON_URL = 'https://mogeko.github.io/kms/data.json'
 
 if (Test-Path .\data.json) {
     $script:MENU_INFO = Get-Content .\data.json | ConvertFrom-Json
+} else {
+    while ($true) {
+        $tmp = New-TemporaryFile
+        Invoke-WebRequest $script:DATA_JSON_URL -OutFile $tmp
+        $script:MENU_INFO = Get-Content $tmp | ConvertFrom-Json
+        Remove-Item $tmp
+        if ($script:MENU_INFO) {
+            break
+        }
+    }
 }
-    
+
 
 function Main {
     param (
