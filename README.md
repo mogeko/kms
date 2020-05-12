@@ -20,7 +20,11 @@ KMS 激活服务器地址: `kms.mogeko.me`
 
 ## 使用方法
 
-双击 `Run.ps1`, 选择合适的服务即可激活相应的软件。
+下载并安装 CA 证书: [`mogeko.cer`](https://github.com/Mogeko/kms/releases/download/v2.1.2/mogeko.cer)
+
+下载并运行 [`Run.ps1`](https://github.com/Mogeko/kms/releases/download/v2.1.2/run.ps1), 选择合适的服务即可激活相应的软件。
+
+[为什么需要安装 CA 证书?](https://github.com/Mogeko/kms/wiki/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E5%AE%89%E8%A3%85-CA-%E8%AF%81%E4%B9%A6%EF%BC%9F)
 
 ### 判断你安装的 Office 是哪个版本
 
