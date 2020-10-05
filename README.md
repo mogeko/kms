@@ -1,5 +1,7 @@
 # KMS 激活脚本
 
+![Status](https://github.com/Mogeko/kms/workflows/Status/badge.svg)
+
 #### 不提倡使用盗版软件！！！
 
 激活 Windows 的脚本只支持激活批量授权版（VOL 版）的 Windows, 零售版（Retail）的

@@ -1,0 +1,35 @@
+name: Status
+
+on:
+  schedule:
+    - cron: '0 12 * * *'
+  push:
+    branches:
+      - master
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+    steps:
+    - name: Checkout vlmcsd
+      uses: actions/checkout@v2
+      with:
+        repository: 'Wind4/vlmcsd'
+    - name: Build vlmcsd
+      run: |
+        sudo apt update && sudo apt install -y make clang
+        make CC=clang
+    - name: Check Status
+      run: |
+        for try in $(seq 10); do
+          if bin/vlmcs ${{secrets.KMS_SERVER}}; then
+            exit 0
+          else
+            sleep $(shuf -i 3-10 -n 1)
+          fi
+        done
+        exit 1
